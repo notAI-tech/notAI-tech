@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>notAI.tech — Open Source AI Tools</title>
-    <meta name="description" content="Building practical, production-ready AI tools. 3000+ GitHub stars across open-source projects in computer vision, NLP, Indic languages, and ML infrastructure.">
+    <title>notAI.tech — AI Products & Open Source</title>
+    <meta name="description" content="notAI.tech builds AI-powered products for browser automation, content intelligence, and keyword monitoring. Active open source contributors with 3,000+ GitHub stars.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -26,17 +26,11 @@
             --pink: #ec4899;
             --cyan: #06b6d4;
             --red: #ef4444;
+            --blue: #3b82f6;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -49,9 +43,7 @@
         /* ─── Navigation ─── */
         nav {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 0; left: 0; right: 0;
             z-index: 100;
             background: rgba(10, 10, 11, 0.8);
             backdrop-filter: blur(20px);
@@ -77,9 +69,7 @@
             letter-spacing: -0.5px;
         }
 
-        .nav-logo span {
-            color: var(--accent);
-        }
+        .nav-logo span { color: var(--accent); }
 
         .nav-links {
             display: flex;
@@ -96,9 +86,7 @@
             transition: color 0.2s;
         }
 
-        .nav-links a:hover {
-            color: var(--text-primary);
-        }
+        .nav-links a:hover { color: var(--text-primary); }
 
         .nav-cta {
             background: var(--accent);
@@ -138,10 +126,8 @@
         .hero::before {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
             background: radial-gradient(ellipse at 50% 0%, rgba(108, 99, 255, 0.08) 0%, transparent 50%),
                         radial-gradient(ellipse at 80% 50%, rgba(6, 182, 212, 0.05) 0%, transparent 40%),
                         radial-gradient(ellipse at 20% 80%, rgba(236, 72, 153, 0.04) 0%, transparent 40%);
@@ -156,7 +142,7 @@
         .hero-content {
             position: relative;
             z-index: 1;
-            max-width: 800px;
+            max-width: 820px;
         }
 
         .hero-badge {
@@ -174,8 +160,7 @@
         }
 
         .hero-badge .dot {
-            width: 6px;
-            height: 6px;
+            width: 6px; height: 6px;
             background: var(--green);
             border-radius: 50%;
             animation: pulse 2s ease-in-out infinite;
@@ -204,7 +189,7 @@
         .hero p {
             font-size: 1.2rem;
             color: var(--text-secondary);
-            max-width: 600px;
+            max-width: 620px;
             margin: 0 auto 2.5rem;
             line-height: 1.7;
         }
@@ -254,6 +239,12 @@
             transform: translateY(-2px);
         }
 
+        .btn-sm {
+            padding: 0.6rem 1.25rem;
+            font-size: 0.85rem;
+            border-radius: 10px;
+        }
+
         /* ─── Stats ─── */
         .stats {
             padding: 4rem 2rem;
@@ -270,9 +261,7 @@
             gap: 2rem;
         }
 
-        .stat-item {
-            text-align: center;
-        }
+        .stat-item { text-align: center; }
 
         .stat-number {
             font-size: 2.5rem;
@@ -292,9 +281,7 @@
         }
 
         /* ─── Section styles ─── */
-        section {
-            padding: 6rem 2rem;
-        }
+        section { padding: 6rem 2rem; }
 
         .section-header {
             text-align: center;
@@ -329,129 +316,155 @@
             margin: 0 auto;
         }
 
-        /* ─── Featured Product: AgentMitra ─── */
-        .featured {
-            background: var(--bg-secondary);
-            border-top: 1px solid var(--border);
-        }
-
-        .featured-card {
+        /* ─── Product Showcase Cards ─── */
+        .product-showcase {
             max-width: 1200px;
             margin: 0 auto;
-            background: linear-gradient(135deg, rgba(108, 99, 255, 0.08), rgba(6, 182, 212, 0.05));
-            border: 1px solid rgba(108, 99, 255, 0.2);
-            border-radius: 24px;
-            padding: 4rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
         }
 
-        .featured-content h3 {
-            font-size: 2rem;
+        .showcase-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .showcase-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .showcase-card.accent-green { border-left: 3px solid var(--green); }
+        .showcase-card.accent-cyan { border-left: 3px solid var(--cyan); }
+        .showcase-card.accent-orange { border-left: 3px solid var(--orange); }
+        .showcase-card.accent-pink { border-left: 3px solid var(--pink); }
+
+        .showcase-content { display: flex; flex-direction: column; }
+
+        .showcase-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            width: fit-content;
+            padding: 0.25rem 0.75rem;
+            border-radius: 100px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.25rem;
+        }
+
+        .tag-green { background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); color: var(--green); }
+        .tag-cyan { background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.3); color: var(--cyan); }
+        .tag-orange { background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); color: var(--orange); }
+        .tag-pink { background: rgba(236, 72, 153, 0.1); border: 1px solid rgba(236, 72, 153, 0.3); color: var(--pink); }
+
+        .showcase-content h3 {
+            font-size: 1.75rem;
             font-weight: 800;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.35rem;
             letter-spacing: -0.5px;
         }
 
-        .featured-tag {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            background: rgba(16, 185, 129, 0.1);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            color: var(--green);
-            font-size: 0.75rem;
-            font-weight: 600;
-            border-radius: 100px;
+        .showcase-domain {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+        }
+
+        .showcase-content p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.7;
             margin-bottom: 1.5rem;
         }
 
-        .featured-content p {
-            color: var(--text-secondary);
-            font-size: 1.05rem;
-            line-height: 1.7;
-            margin-bottom: 2rem;
-        }
-
-        .featured-features {
+        .showcase-features {
             list-style: none;
             display: grid;
-            gap: 0.75rem;
-            margin-bottom: 2rem;
+            gap: 0.6rem;
+            margin-bottom: 1.75rem;
         }
 
-        .featured-features li {
+        .showcase-features li {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
-            font-size: 0.95rem;
+            gap: 0.6rem;
+            font-size: 0.9rem;
             color: var(--text-secondary);
         }
 
-        .featured-features li .check {
-            width: 20px;
-            height: 20px;
-            background: rgba(16, 185, 129, 0.15);
+        .showcase-features li .check {
+            width: 18px; height: 18px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--green);
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             flex-shrink: 0;
         }
 
-        .featured-visual {
-            background: var(--bg-card);
+        .check-green { background: rgba(16, 185, 129, 0.15); color: var(--green); }
+        .check-cyan { background: rgba(6, 182, 212, 0.15); color: var(--cyan); }
+        .check-orange { background: rgba(245, 158, 11, 0.15); color: var(--orange); }
+        .check-pink { background: rgba(236, 72, 153, 0.15); color: var(--pink); }
+
+        .showcase-visual {
+            background: var(--bg-primary);
             border: 1px solid var(--border);
             border-radius: 16px;
             padding: 2rem;
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85rem;
-            line-height: 1.8;
+            font-size: 0.8rem;
+            line-height: 1.9;
         }
 
-        .featured-visual .line {
+        .showcase-visual .line {
             display: flex;
             gap: 0.5rem;
         }
 
-        .featured-visual .prompt {
-            color: var(--green);
+        .showcase-visual .prompt { color: var(--green); }
+        .showcase-visual .cmd { color: var(--text-secondary); }
+        .showcase-visual .output { color: var(--text-muted); padding-left: 1rem; }
+        .showcase-visual .highlight { color: var(--accent-light); }
+        .showcase-visual .dim { color: var(--text-muted); }
+        .showcase-visual .success { color: var(--green); }
+        .showcase-visual .info { color: var(--cyan); }
+        .showcase-visual .warn { color: var(--orange); }
+
+        /* ─── Open Source Grid ─── */
+        .oss-section {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
         }
 
-        .featured-visual .cmd {
-            color: var(--text-secondary);
-        }
-
-        .featured-visual .output {
-            color: var(--text-muted);
-            padding-left: 1rem;
-        }
-
-        .featured-visual .highlight {
-            color: var(--accent-light);
-        }
-
-        .featured-visual .dim {
-            color: var(--text-muted);
-        }
-
-        /* ─── Products Grid ─── */
-        .products-grid {
+        .oss-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
+            gap: 1.25rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .product-card {
+        .oss-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 2rem;
+            border-radius: 14px;
+            padding: 1.5rem;
             transition: all 0.3s;
             text-decoration: none;
             color: inherit;
@@ -459,154 +472,68 @@
             flex-direction: column;
         }
 
-        .product-card:hover {
+        .oss-card:hover {
             border-color: var(--accent);
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
         }
 
-        .product-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 1.25rem;
-        }
-
-        .product-card h3 {
-            font-size: 1.15rem;
+        .oss-card h4 {
+            font-size: 1rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.3px;
+            margin-bottom: 0.4rem;
+            letter-spacing: -0.2px;
         }
 
-        .product-card .product-desc {
-            font-size: 0.9rem;
+        .oss-card .oss-desc {
+            font-size: 0.82rem;
             color: var(--text-secondary);
-            line-height: 1.6;
+            line-height: 1.5;
             flex-grow: 1;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1rem;
         }
 
-        .product-meta {
+        .oss-meta {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            padding-top: 1rem;
+            gap: 0.75rem;
+            padding-top: 0.75rem;
             border-top: 1px solid var(--border);
+            font-size: 0.75rem;
         }
 
-        .product-stars {
+        .oss-stars {
             display: flex;
             align-items: center;
-            gap: 0.35rem;
-            font-size: 0.8rem;
+            gap: 0.3rem;
             color: var(--orange);
             font-weight: 600;
         }
 
-        .product-lang {
-            font-size: 0.75rem;
+        .oss-lang {
             color: var(--text-muted);
             font-weight: 500;
             background: rgba(255,255,255,0.05);
-            padding: 0.2rem 0.6rem;
-            border-radius: 6px;
+            padding: 0.15rem 0.5rem;
+            border-radius: 5px;
         }
 
-        .product-pip {
+        .oss-pip {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
+            font-size: 0.68rem;
             color: var(--cyan);
             margin-left: auto;
         }
 
-        /* ─── Category Sections ─── */
-        .category-label {
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 1.5rem;
-        }
-
-        .category-label::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: var(--border);
-        }
-
-        /* ─── Indic AI Section ─── */
-        .indic-section {
-            background: var(--bg-secondary);
-            border-top: 1px solid var(--border);
-        }
-
-        /* ─── Infrastructure Section ─── */
-        .infra-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .infra-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 2rem;
-            transition: all 0.3s;
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .infra-card:hover {
-            border-color: var(--cyan);
-            transform: translateY(-3px);
-        }
-
-        .infra-card h3 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .infra-card p {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        .infra-card code {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.8rem;
-            background: rgba(108, 99, 255, 0.1);
-            padding: 0.15rem 0.5rem;
-            border-radius: 4px;
-            color: var(--accent-light);
+        .oss-more {
+            text-align: center;
+            margin-top: 2.5rem;
         }
 
         /* ─── CTA Section ─── */
         .cta-section {
             text-align: center;
             border-top: 1px solid var(--border);
-            background: var(--bg-secondary);
         }
 
         .cta-section h2 {
@@ -620,7 +547,7 @@
             color: var(--text-secondary);
             font-size: 1.05rem;
             margin-bottom: 2rem;
-            max-width: 500px;
+            max-width: 520px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -636,7 +563,7 @@
         footer {
             padding: 3rem 2rem;
             border-top: 1px solid var(--border);
-            text-align: center;
+            background: var(--bg-secondary);
         }
 
         .footer-inner {
@@ -664,18 +591,14 @@
             transition: color 0.2s;
         }
 
-        .footer-links a:hover {
-            color: var(--text-primary);
-        }
+        .footer-links a:hover { color: var(--text-primary); }
 
         /* ─── Responsive ─── */
         @media (max-width: 900px) {
             .nav-links {
                 display: none;
                 position: absolute;
-                top: 64px;
-                left: 0;
-                right: 0;
+                top: 64px; left: 0; right: 0;
                 background: rgba(10, 10, 11, 0.95);
                 backdrop-filter: blur(20px);
                 flex-direction: column;
@@ -683,63 +606,23 @@
                 gap: 1rem;
                 border-bottom: 1px solid var(--border);
             }
-
-            .nav-links.open {
-                display: flex;
-            }
-
-            .mobile-toggle {
-                display: block;
-            }
-
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1.5rem;
-            }
-
-            .featured-card {
-                grid-template-columns: 1fr;
-                padding: 2rem;
-                gap: 2rem;
-            }
-
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .infra-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-inner {
-                flex-direction: column;
-                gap: 1rem;
-            }
+            .nav-links.open { display: flex; }
+            .mobile-toggle { display: block; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+            .showcase-card { grid-template-columns: 1fr; padding: 2rem; gap: 2rem; }
+            .oss-grid { grid-template-columns: 1fr; }
+            .footer-inner { flex-direction: column; gap: 1rem; }
         }
 
         @media (max-width: 600px) {
-            .hero {
-                padding: 7rem 1.5rem 3rem;
-            }
-
-            .hero h1 {
-                letter-spacing: -1px;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .featured-card {
-                padding: 1.5rem;
-            }
-
-            section {
-                padding: 4rem 1.5rem;
-            }
+            .hero { padding: 7rem 1.5rem 3rem; }
+            .hero h1 { letter-spacing: -1px; }
+            .hero p { font-size: 1rem; }
+            .showcase-card { padding: 1.5rem; }
+            section { padding: 4rem 1.5rem; }
         }
 
-        /* ─── Scroll animations ─── */
+        /* ─── Animations ─── */
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
@@ -751,10 +634,8 @@
             transform: translateY(0);
         }
 
-        /* ─── Grid pattern background ─── */
-        .grid-bg {
-            position: relative;
-        }
+        /* ─── Grid background ─── */
+        .grid-bg { position: relative; }
 
         .grid-bg::before {
             content: '';
@@ -777,10 +658,10 @@
         <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">&#9776;</button>
         <ul class="nav-links">
             <li><a href="#products">Products</a></li>
-            <li><a href="#indic-ai">Indic AI</a></li>
-            <li><a href="#infrastructure">Infrastructure</a></li>
-            <li><a href="#agentmitra">AgentMitra</a></li>
-            <li><a href="https://github.com/notAI-tech" class="nav-cta" target="_blank">GitHub</a></li>
+            <li><a href="#open-source">Open Source</a></li>
+            <li><a href="https://agentmitra.in" target="_blank">AgentMitra</a></li>
+            <li><a href="https://trackernews.app" target="_blank">TrackerNews</a></li>
+            <li><a href="https://github.com/notAI-tech" target="_blank" class="nav-cta">GitHub</a></li>
         </ul>
     </div>
 </nav>
@@ -790,23 +671,23 @@
     <div class="hero-content">
         <div class="hero-badge">
             <span class="dot"></span>
-            Open Source &middot; 3,000+ GitHub Stars
+            AI Products &middot; Open Source Contributors
         </div>
         <h1>
-            Practical AI tools<br>
-            <span class="gradient">built for production</span>
+            We build AI products<br>
+            <span class="gradient">that solve real problems</span>
         </h1>
         <p>
-            We build open-source AI/ML tools that are simple to use, pip-installable, and ready for production. From content moderation to Indic language processing.
+            notAI.tech builds intelligent products for browser automation, content monitoring, and data intelligence. We're also active contributors to the open source AI ecosystem.
         </p>
         <div class="hero-actions">
             <a href="#products" class="btn btn-primary">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-                Explore Products
+                Our Products
             </a>
             <a href="https://github.com/notAI-tech" target="_blank" class="btn btn-secondary">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                View on GitHub
+                Open Source
             </a>
         </div>
     </div>
@@ -816,16 +697,16 @@
 <div class="stats">
     <div class="stats-grid">
         <div class="stat-item fade-in">
+            <div class="stat-number">4</div>
+            <div class="stat-label">Products</div>
+        </div>
+        <div class="stat-item fade-in">
             <div class="stat-number">3,000+</div>
             <div class="stat-label">GitHub Stars</div>
         </div>
         <div class="stat-item fade-in">
             <div class="stat-number">15+</div>
-            <div class="stat-label">Open Source Projects</div>
-        </div>
-        <div class="stat-item fade-in">
-            <div class="stat-number">10+</div>
-            <div class="stat-label">pip Packages</div>
+            <div class="stat-label">Open Source Contributions</div>
         </div>
         <div class="stat-item fade-in">
             <div class="stat-number">9+</div>
@@ -834,230 +715,277 @@
     </div>
 </div>
 
-<!-- Featured: AgentMitra -->
-<section class="featured" id="agentmitra">
-    <div class="section-header">
-        <div class="section-label">Featured Product</div>
-        <h2 class="section-title">AgentMitra</h2>
-        <p class="section-desc">AI-powered browser automation. Describe tasks in plain English, watch the AI execute them.</p>
-    </div>
-    <div class="featured-card fade-in">
-        <div class="featured-content">
-            <div class="featured-tag">SaaS Product</div>
-            <h3>Browser Automation, Reimagined</h3>
-            <p>
-                AgentMitra uses Google's Gemini AI to execute browser tasks described in natural language. No code, no brittle selectors, no maintenance headaches.
-            </p>
-            <ul class="featured-features">
-                <li><span class="check">&#10003;</span> Natural language task descriptions</li>
-                <li><span class="check">&#10003;</span> Real-time live browser view via VNC</li>
-                <li><span class="check">&#10003;</span> Human takeover capability mid-execution</li>
-                <li><span class="check">&#10003;</span> 16 browser tools with auto-recovery</li>
-                <li><span class="check">&#10003;</span> Reusable test cases &amp; flow chaining</li>
-                <li><span class="check">&#10003;</span> No per-run fees &mdash; bring your own API key</li>
-            </ul>
-            <a href="https://agentmitra.in" target="_blank" class="btn btn-primary">
-                Visit AgentMitra
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-            </a>
-        </div>
-        <div class="featured-visual">
-            <div class="line"><span class="prompt">$</span><span class="cmd"> Describe your task:</span></div>
-            <div class="output highlight">"Go to our dashboard, click Settings,</div>
-            <div class="output highlight"> change the timezone to IST, and save"</div>
-            <br>
-            <div class="line"><span class="dim">[Observe]</span> <span class="cmd">Capturing DOM + screenshot...</span></div>
-            <div class="line"><span class="dim">[Think]</span> <span class="cmd">Found Settings link in navbar</span></div>
-            <div class="line"><span class="dim">[Act]</span> <span class="cmd">Clicking "Settings"...</span></div>
-            <div class="line"><span class="dim">[Act]</span> <span class="cmd">Selecting timezone dropdown...</span></div>
-            <div class="line"><span class="dim">[Act]</span> <span class="cmd">Choosing "IST (UTC+5:30)"...</span></div>
-            <div class="line"><span class="dim">[Act]</span> <span class="cmd">Clicking "Save Changes"...</span></div>
-            <div class="line"><span class="dim">[Evaluate]</span> <span class="prompt">&#10003; Task completed successfully</span></div>
-        </div>
-    </div>
-</section>
-
-<!-- Products: AI & ML -->
+<!-- Products -->
 <section id="products" class="grid-bg">
     <div class="section-header">
-        <div class="section-label">Products</div>
-        <h2 class="section-title">AI &amp; ML Tools</h2>
-        <p class="section-desc">Production-ready, pip-installable Python packages for computer vision and natural language processing.</p>
+        <div class="section-label">Our Products</div>
+        <h2 class="section-title">What We Build</h2>
+        <p class="section-desc">AI-powered products designed for real-world use — from browser automation to intelligent content monitoring.</p>
     </div>
 
-    <div class="category-label">Computer Vision</div>
-    <div class="products-grid" style="margin-bottom: 3rem;">
-        <a href="https://github.com/notAI-tech/NudeNet" target="_blank" class="product-card fade-in">
-            <div class="product-icon" style="background: rgba(239, 68, 68, 0.1); color: var(--red);">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-            </div>
-            <h3>NudeNet</h3>
-            <p class="product-desc">Lightweight nudity detection and automatic censoring. YOLOv8-based with ONNX runtime. Detects 18 label classes with high accuracy.</p>
-            <div class="product-meta">
-                <span class="product-stars">&#9733; 2,282</span>
-                <span class="product-lang">Python</span>
-                <span class="product-pip">pip install nudenet</span>
-            </div>
-        </a>
-        <a href="https://github.com/notAI-tech/LogoDet" target="_blank" class="product-card fade-in">
-            <div class="product-icon" style="background: rgba(245, 158, 11, 0.1); color: var(--orange);">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-            </div>
-            <h3>LogoDet</h3>
-            <p class="product-desc">Neural network logo detection for 292+ company brands. RetinaNet-based architecture. Available as module, Docker container, and API.</p>
-            <div class="product-meta">
-                <span class="product-stars">&#9733; 27</span>
-                <span class="product-lang">Python</span>
-                <span class="product-pip">pip install logodet</span>
-            </div>
-        </a>
-        <a href="https://github.com/notAI-tech/keras-craft" target="_blank" class="product-card fade-in">
-            <div class="product-icon" style="background: rgba(6, 182, 212, 0.1); color: var(--cyan);">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8M16 17H8M10 9H8"/></svg>
-            </div>
-            <h3>keras-craft</h3>
-            <p class="product-desc">Text detection in images using CRAFT pre-trained model. Supports batch inference with auto-batching and TF Serving deployment.</p>
-            <div class="product-meta">
-                <span class="product-stars">&#9733; 8</span>
-                <span class="product-lang">Python</span>
-            </div>
-        </a>
-    </div>
+    <div class="product-showcase">
 
-    <div class="category-label">Natural Language Processing</div>
-    <div class="products-grid">
-        <a href="https://github.com/notAI-tech/deepsegment" target="_blank" class="product-card fade-in">
-            <div class="product-icon" style="background: rgba(16, 185, 129, 0.1); color: var(--green);">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <!-- AgentMitra -->
+        <a href="https://agentmitra.in" target="_blank" class="showcase-card accent-green fade-in">
+            <div class="showcase-content">
+                <div class="showcase-tag tag-green">Browser Automation</div>
+                <h3>AgentMitra</h3>
+                <div class="showcase-domain">agentmitra.in</div>
+                <p>AI-powered browser automation platform. Describe tasks in plain English and watch the AI agent navigate, click, type, and complete them autonomously. No code required.</p>
+                <ul class="showcase-features">
+                    <li><span class="check check-green">&#10003;</span> Natural language task descriptions</li>
+                    <li><span class="check check-green">&#10003;</span> Real-time live browser view via VNC</li>
+                    <li><span class="check check-green">&#10003;</span> Human takeover mid-execution</li>
+                    <li><span class="check check-green">&#10003;</span> Reusable test cases &amp; flow chaining</li>
+                    <li><span class="check check-green">&#10003;</span> No per-run fees &mdash; bring your own LLM key</li>
+                </ul>
+                <span class="btn btn-primary btn-sm" style="width: fit-content;">
+                    Visit AgentMitra
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                </span>
             </div>
-            <h3>deepsegment</h3>
-            <p class="product-desc">Deep learning sentence segmenter. Splits unsegmented text into proper sentences. Supports English, French, and Italian with custom fine-tuning.</p>
-            <div class="product-meta">
-                <span class="product-stars">&#9733; 304</span>
-                <span class="product-lang">Python</span>
-                <span class="product-pip">pip install deepsegment</span>
-            </div>
-        </a>
-        <a href="https://github.com/notAI-tech/fastPunct" target="_blank" class="product-card fade-in">
-            <div class="product-icon" style="background: rgba(236, 72, 153, 0.1); color: var(--pink);">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-            </div>
-            <h3>fastPunct</h3>
-            <p class="product-desc">Punctuation restoration and spell correction for English. Restores capitalization, punctuation, and fixes common spelling errors.</p>
-            <div class="product-meta">
-                <span class="product-stars">&#9733; 252</span>
-                <span class="product-lang">Python</span>
-                <span class="product-pip">pip install fastpunct</span>
-            </div>
-        </a>
-        <a href="https://github.com/notAI-tech/LiteIndex" target="_blank" class="product-card fade-in">
-            <div class="product-icon" style="background: rgba(108, 99, 255, 0.1); color: var(--accent);">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-            </div>
-            <h3>LiteIndex</h3>
-            <p class="product-desc">Embedded, thread-safe, disk-backed index and cache for Python. MongoDB-like queries, nearest neighbor search, LRU/LFU eviction.</p>
-            <div class="product-meta">
-                <span class="product-stars">&#9733; 6</span>
-                <span class="product-lang">Python</span>
-                <span class="product-pip">pip install liteindex</span>
+            <div class="showcase-visual">
+                <div class="line"><span class="prompt">$</span><span class="cmd"> Describe your task:</span></div>
+                <div class="output highlight">"Go to Settings, change timezone</div>
+                <div class="output highlight"> to IST, and save changes"</div>
+                <br>
+                <div class="line"><span class="dim">[Observe]</span> <span class="cmd">Capturing DOM + screenshot...</span></div>
+                <div class="line"><span class="dim">[Think]</span> <span class="cmd">Found Settings in navbar</span></div>
+                <div class="line"><span class="dim">[Act]</span> <span class="cmd">Clicking "Settings"...</span></div>
+                <div class="line"><span class="dim">[Act]</span> <span class="cmd">Selecting timezone dropdown...</span></div>
+                <div class="line"><span class="dim">[Act]</span> <span class="cmd">Choosing "IST (UTC+5:30)"...</span></div>
+                <div class="line"><span class="dim">[Act]</span> <span class="cmd">Clicking "Save Changes"...</span></div>
+                <div class="line"><span class="dim">[Evaluate]</span> <span class="success">&#10003; Task completed</span></div>
             </div>
         </a>
+
+        <!-- TrackerNews -->
+        <a href="https://trackernews.app" target="_blank" class="showcase-card accent-cyan fade-in">
+            <div class="showcase-content">
+                <div class="showcase-tag tag-cyan">Content Intelligence</div>
+                <h3>TrackerNews</h3>
+                <div class="showcase-domain">trackernews.app</div>
+                <p>Turn online discussions into structured intelligence. AI monitors Reddit, Hacker News, and Twitter — extracting structured data from conversations using custom schemas you define.</p>
+                <ul class="showcase-features">
+                    <li><span class="check check-cyan">&#10003;</span> AI-powered relevance filtering</li>
+                    <li><span class="check check-cyan">&#10003;</span> Custom data extraction schemas</li>
+                    <li><span class="check check-cyan">&#10003;</span> Reddit, HN, and Twitter monitoring</li>
+                    <li><span class="check check-cyan">&#10003;</span> Aggregated pattern views &amp; trends</li>
+                    <li><span class="check check-cyan">&#10003;</span> No usage limits per topic</li>
+                </ul>
+                <span class="btn btn-secondary btn-sm" style="width: fit-content; border-color: rgba(6, 182, 212, 0.3);">
+                    Visit TrackerNews
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                </span>
+            </div>
+            <div class="showcase-visual">
+                <div class="line"><span class="info">TrackerNews</span> <span class="dim">| Topic Monitor</span></div>
+                <br>
+                <div class="line"><span class="dim">Keyword:</span> <span class="highlight">"browser automation"</span></div>
+                <div class="line"><span class="dim">Sources:</span> <span class="cmd">Reddit, HN, Twitter</span></div>
+                <div class="line"><span class="dim">Schema:</span> <span class="cmd">Tool, Sentiment, Use Case</span></div>
+                <br>
+                <div class="line"><span class="success">&#9679;</span> <span class="cmd">r/webdev &mdash; "Comparing Playwright..."</span></div>
+                <div class="output dim">Tool: Playwright | Sentiment: Positive</div>
+                <div class="line"><span class="success">&#9679;</span> <span class="cmd">HN &mdash; "Show HN: AI test runner..."</span></div>
+                <div class="output dim">Tool: Custom | Sentiment: Neutral</div>
+                <div class="line"><span class="success">&#9679;</span> <span class="cmd">@devtools &mdash; "Just tried..."</span></div>
+                <div class="output dim">Tool: Selenium | Sentiment: Negative</div>
+                <br>
+                <div class="line"><span class="dim">Extracted:</span> <span class="info">147 entries</span> <span class="dim">| 3 sources</span></div>
+            </div>
+        </a>
+
+        <!-- TopicTracker -->
+        <a href="https://topictracker.app" target="_blank" class="showcase-card accent-orange fade-in">
+            <div class="showcase-content">
+                <div class="showcase-tag tag-orange">Keyword Monitoring</div>
+                <h3>TopicTracker</h3>
+                <div class="showcase-domain">topictracker.app</div>
+                <p>Monitor and track keywords across YouTube videos, RSS feeds, and websites. Get notified when new content matches your interests — with timestamped links to the exact moment.</p>
+                <ul class="showcase-features">
+                    <li><span class="check check-orange">&#10003;</span> YouTube transcript keyword search</li>
+                    <li><span class="check check-orange">&#10003;</span> Channel &amp; RSS feed monitoring</li>
+                    <li><span class="check check-orange">&#10003;</span> Website content tracking</li>
+                    <li><span class="check check-orange">&#10003;</span> Timestamped navigation to exact moments</li>
+                    <li><span class="check check-orange">&#10003;</span> Free to use</li>
+                </ul>
+                <span class="btn btn-secondary btn-sm" style="width: fit-content; border-color: rgba(245, 158, 11, 0.3);">
+                    Visit TopicTracker
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                </span>
+            </div>
+            <div class="showcase-visual">
+                <div class="line"><span class="warn">TopicTracker</span> <span class="dim">| Keyword Monitor</span></div>
+                <br>
+                <div class="line"><span class="dim">Tracking:</span> <span class="highlight">"machine learning"</span></div>
+                <div class="line"><span class="dim">Sources:</span> <span class="cmd">3 channels, 5 feeds, 2 sites</span></div>
+                <br>
+                <div class="line"><span class="warn">&#9679;</span> <span class="cmd">New match in YouTube video</span></div>
+                <div class="output dim">"Intro to ML" by @channel</div>
+                <div class="output success">&#8627; Jump to 14:32 &mdash; "machine learning..."</div>
+                <br>
+                <div class="line"><span class="warn">&#9679;</span> <span class="cmd">New match in RSS feed</span></div>
+                <div class="output dim">TechBlog &mdash; "ML in Production 2026"</div>
+                <br>
+                <div class="line"><span class="warn">&#9679;</span> <span class="cmd">Website content updated</span></div>
+                <div class="output dim">docs.example.com/ml &mdash; 3 new mentions</div>
+            </div>
+        </a>
+
+        <!-- KnowledgeForAI -->
+        <a href="https://knowledgeforai.com" target="_blank" class="showcase-card accent-pink fade-in">
+            <div class="showcase-content">
+                <div class="showcase-tag tag-pink">MCP Service</div>
+                <h3>KnowledgeForAI</h3>
+                <div class="showcase-domain">knowledgeforai.com</div>
+                <p>Hosted remote MCP service that gives LLMs real-time search across HackerNews, Reddit, Twitter, App Store, and Play Store. Connect to ChatGPT, Claude, or any MCP-compatible client.</p>
+                <ul class="showcase-features">
+                    <li><span class="check check-pink">&#10003;</span> Real-time search for LLMs via MCP</li>
+                    <li><span class="check check-pink">&#10003;</span> HackerNews, Reddit, Twitter data</li>
+                    <li><span class="check check-pink">&#10003;</span> App Store &amp; Play Store reviews</li>
+                    <li><span class="check check-pink">&#10003;</span> Works with ChatGPT, Claude &amp; more</li>
+                    <li><span class="check check-pink">&#10003;</span> Pay-as-you-go pricing</li>
+                </ul>
+                <span class="btn btn-secondary btn-sm" style="width: fit-content; border-color: rgba(236, 72, 153, 0.3);">
+                    Visit KnowledgeForAI
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                </span>
+            </div>
+            <div class="showcase-visual">
+                <div class="line"><span class="highlight">KnowledgeForAI</span> <span class="dim">| MCP Server</span></div>
+                <br>
+                <div class="line"><span class="dim">Connected:</span> <span class="cmd">Claude Desktop</span></div>
+                <div class="line"><span class="dim">Query:</span> <span class="highlight">"What are people saying about</span></div>
+                <div class="line"><span class="highlight"> AI coding assistants on Reddit?"</span></div>
+                <br>
+                <div class="line"><span class="dim">[MCP]</span> <span class="cmd">Searching Reddit...</span></div>
+                <div class="line"><span class="dim">[MCP]</span> <span class="cmd">Searching HackerNews...</span></div>
+                <div class="line"><span class="dim">[MCP]</span> <span class="cmd">Searching Twitter...</span></div>
+                <br>
+                <div class="line"><span class="success">&#10003;</span> <span class="cmd">42 results from 3 sources</span></div>
+                <div class="output dim">Cost: $0.003</div>
+            </div>
+        </a>
+
     </div>
 </section>
 
-<!-- Indic AI -->
-<section id="indic-ai" class="indic-section">
+<!-- Open Source Contributions -->
+<section id="open-source" class="oss-section">
     <div class="section-header">
-        <div class="section-label">Indic Languages</div>
-        <h2 class="section-title">AI for Indian Languages</h2>
-        <p class="section-desc">Open-source models for translation, transliteration, speech recognition, and summarization across 9+ Indian languages.</p>
+        <div class="section-label">Open Source</div>
+        <h2 class="section-title">Our Contributions</h2>
+        <p class="section-desc">We actively contribute to the open source AI ecosystem. Our projects span computer vision, NLP, Indic languages, and ML infrastructure.</p>
     </div>
 
-    <div class="products-grid" style="max-width: 1200px; margin: 0 auto;">
-        <a href="https://github.com/notAI-tech/DeepTranslit" target="_blank" class="product-card fade-in">
-            <div class="product-icon" style="background: rgba(245, 158, 11, 0.1); color: var(--orange);">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            </div>
-            <h3>DeepTranslit</h3>
-            <p class="product-desc">Transliteration from romanized text to native scripts. Supports Telugu, Kannada, Tamil, Malayalam, Marathi, and Hindi.</p>
-            <div class="product-meta">
-                <span class="product-stars">&#9733; 50</span>
-                <span class="product-lang">Python</span>
-                <span class="product-pip">pip install deeptranslit</span>
+    <div class="oss-grid">
+        <a href="https://github.com/notAI-tech/NudeNet" target="_blank" class="oss-card fade-in">
+            <h4>NudeNet</h4>
+            <p class="oss-desc">Lightweight nudity detection and censoring. YOLOv8 + ONNX runtime, 18 label classes.</p>
+            <div class="oss-meta">
+                <span class="oss-stars">&#9733; 2,282</span>
+                <span class="oss-lang">Python</span>
+                <span class="oss-pip">pip install nudenet</span>
             </div>
         </a>
-        <a href="https://github.com/notAI-tech/Anuvaad" target="_blank" class="product-card fade-in">
-            <div class="product-icon" style="background: rgba(16, 185, 129, 0.1); color: var(--green);">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg>
-            </div>
-            <h3>Anuvaad</h3>
-            <p class="product-desc">Machine translation for 9 Indic languages. Outperforms Google Translate on BLEU scores for multiple language pairs including Telugu and Tamil.</p>
-            <div class="product-meta">
-                <span class="product-stars">&#9733; 5</span>
-                <span class="product-lang">Python</span>
-                <span class="product-pip">pip install anuvaad</span>
+        <a href="https://github.com/notAI-tech/deepsegment" target="_blank" class="oss-card fade-in">
+            <h4>deepsegment</h4>
+            <p class="oss-desc">Deep learning sentence segmenter. English, French, Italian. Custom fine-tuning support.</p>
+            <div class="oss-meta">
+                <span class="oss-stars">&#9733; 304</span>
+                <span class="oss-lang">Python</span>
+                <span class="oss-pip">pip install deepsegment</span>
             </div>
         </a>
-        <a href="https://github.com/notAI-tech/IndicASR" target="_blank" class="product-card fade-in">
-            <div class="product-icon" style="background: rgba(236, 72, 153, 0.1); color: var(--pink);">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        <a href="https://github.com/notAI-tech/fastPunct" target="_blank" class="oss-card fade-in">
+            <h4>fastPunct</h4>
+            <p class="oss-desc">Punctuation restoration and spell correction for English text.</p>
+            <div class="oss-meta">
+                <span class="oss-stars">&#9733; 252</span>
+                <span class="oss-lang">Python</span>
+                <span class="oss-pip">pip install fastpunct</span>
             </div>
-            <h3>IndicASR</h3>
-            <p class="product-desc">Speech recognition for Indian languages. Built on wav2vec2 XLSR-53. Currently supports Telugu with more languages coming soon.</p>
-            <div class="product-meta">
-                <span class="product-stars">&#9733; 13</span>
-                <span class="product-lang">Python</span>
-                <span class="product-pip">pip install indicasr</span>
+        </a>
+        <a href="https://github.com/notAI-tech/fastDeploy" target="_blank" class="oss-card fade-in">
+            <h4>fastDeploy</h4>
+            <p class="oss-desc">Deploy ML pipelines as microservices. Auto-batching, Prometheus, Kubernetes-ready.</p>
+            <div class="oss-meta">
+                <span class="oss-stars">&#9733; 102</span>
+                <span class="oss-lang">Python</span>
+                <span class="oss-pip">pip install fastdeploy</span>
+            </div>
+        </a>
+        <a href="https://github.com/notAI-tech/DeepTranslit" target="_blank" class="oss-card fade-in">
+            <h4>DeepTranslit</h4>
+            <p class="oss-desc">Transliteration for 6 Indic languages — Telugu, Kannada, Tamil, Malayalam, Marathi, Hindi.</p>
+            <div class="oss-meta">
+                <span class="oss-stars">&#9733; 50</span>
+                <span class="oss-lang">Python</span>
+                <span class="oss-pip">pip install deeptranslit</span>
+            </div>
+        </a>
+        <a href="https://github.com/notAI-tech/LogoDet" target="_blank" class="oss-card fade-in">
+            <h4>LogoDet</h4>
+            <p class="oss-desc">Neural network logo detection for 292+ brands. RetinaNet architecture.</p>
+            <div class="oss-meta">
+                <span class="oss-stars">&#9733; 27</span>
+                <span class="oss-lang">Python</span>
+                <span class="oss-pip">pip install logodet</span>
+            </div>
+        </a>
+        <a href="https://github.com/notAI-tech/IndicASR" target="_blank" class="oss-card fade-in">
+            <h4>IndicASR</h4>
+            <p class="oss-desc">Speech recognition for Indian languages. Built on wav2vec2 XLSR-53.</p>
+            <div class="oss-meta">
+                <span class="oss-stars">&#9733; 13</span>
+                <span class="oss-lang">Python</span>
+                <span class="oss-pip">pip install indicasr</span>
+            </div>
+        </a>
+        <a href="https://github.com/notAI-tech/Anuvaad" target="_blank" class="oss-card fade-in">
+            <h4>Anuvaad</h4>
+            <p class="oss-desc">Machine translation for 9 Indic languages. Outperforms Google Translate on BLEU.</p>
+            <div class="oss-meta">
+                <span class="oss-stars">&#9733; 5</span>
+                <span class="oss-lang">Python</span>
+                <span class="oss-pip">pip install anuvaad</span>
+            </div>
+        </a>
+        <a href="https://github.com/notAI-tech/LiteIndex" target="_blank" class="oss-card fade-in">
+            <h4>LiteIndex</h4>
+            <p class="oss-desc">Embedded, thread-safe index &amp; cache. MongoDB-like queries, nearest neighbor search.</p>
+            <div class="oss-meta">
+                <span class="oss-stars">&#9733; 6</span>
+                <span class="oss-lang">Python</span>
+                <span class="oss-pip">pip install liteindex</span>
             </div>
         </a>
     </div>
-</section>
 
-<!-- Infrastructure -->
-<section id="infrastructure" class="grid-bg">
-    <div class="section-header">
-        <div class="section-label">Infrastructure</div>
-        <h2 class="section-title">ML Deployment &amp; Utilities</h2>
-        <p class="section-desc">Tools to deploy, serve, and manage your machine learning models in production.</p>
-    </div>
-
-    <div class="infra-grid">
-        <a href="https://github.com/notAI-tech/fastDeploy" target="_blank" class="infra-card fade-in">
-            <h3>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                fastDeploy
-            </h3>
-            <p>Deploy ML inference pipelines as microservices with auto-batching, Prometheus metrics, auto-generated Dockerfiles, and Kubernetes health checks. Minimal code required.</p>
-            <div class="product-meta" style="margin-top: 1rem;">
-                <span class="product-stars">&#9733; 102</span>
-                <span class="product-pip">pip install fastdeploy</span>
-            </div>
-        </a>
-        <a href="https://github.com/notAI-tech/batBelt" target="_blank" class="infra-card fade-in">
-            <h3>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                batBelt
-            </h3>
-            <p>CLI utility suite: <code>batServe</code> file server with tunneling, <code>batGet</code> concurrent downloader, and <code>batMove</code> fast file mover/renamer.</p>
-            <div class="product-meta" style="margin-top: 1rem;">
-                <span class="product-stars">&#9733; 2</span>
-                <span class="product-pip">pip install batbelt</span>
-            </div>
+    <div class="oss-more">
+        <a href="https://github.com/notAI-tech" target="_blank" class="btn btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            View All on GitHub
         </a>
     </div>
 </section>
 
 <!-- CTA -->
-<section class="cta-section">
-    <h2>Start Building with notAI.tech</h2>
-    <p>All our tools are open source, pip-installable, and Docker-ready. Get started in minutes.</p>
+<section class="cta-section grid-bg">
+    <h2>Try Our Products</h2>
+    <p>From AI browser automation to real-time content intelligence — we build tools that work.</p>
     <div class="cta-actions">
-        <a href="https://github.com/notAI-tech" target="_blank" class="btn btn-primary">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            Explore on GitHub
-        </a>
-        <a href="https://agentmitra.in" target="_blank" class="btn btn-secondary">
+        <a href="https://agentmitra.in" target="_blank" class="btn btn-primary">
             Try AgentMitra
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+        <a href="https://trackernews.app" target="_blank" class="btn btn-secondary">
+            Try TrackerNews
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+        <a href="https://topictracker.app" target="_blank" class="btn btn-secondary">
+            Try TopicTracker
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
         </a>
     </div>
@@ -1067,29 +995,27 @@
 <footer>
     <div class="footer-inner">
         <div class="footer-left">
-            &copy; 2026 notAI.tech &mdash; Building practical AI for everyone.
+            &copy; 2026 notAI.tech
         </div>
         <div class="footer-links">
-            <a href="https://github.com/notAI-tech" target="_blank">GitHub</a>
             <a href="https://agentmitra.in" target="_blank">AgentMitra</a>
-            <a href="mailto:praneethbedapudi@gmail.com">Contact</a>
+            <a href="https://trackernews.app" target="_blank">TrackerNews</a>
+            <a href="https://topictracker.app" target="_blank">TopicTracker</a>
+            <a href="https://knowledgeforai.com" target="_blank">KnowledgeForAI</a>
+            <a href="https://github.com/notAI-tech" target="_blank">GitHub</a>
         </div>
     </div>
 </footer>
 
 <script>
-    // Intersection Observer for fade-in animations
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
+            if (entry.isIntersecting) entry.target.classList.add('visible');
         });
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    // Smooth scroll for nav links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();

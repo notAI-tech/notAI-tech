@@ -16,7 +16,7 @@
     <meta name="twitter:title" content="notai.tech — Useful products built by passionate engineers">
     <meta name="twitter:description" content="Open source tools and commercial software at the intersection of AI and practical utility.">
     <meta name="twitter:image" content="https://notai.tech/og.png">
-    <meta name="theme-color" content="#B44D2D">
+    <meta name="theme-color" content="#161514">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="favicon.png">
@@ -53,7 +53,9 @@
                         sans: ['"IBM Plex Sans"', 'system-ui', '-apple-system', 'sans-serif'],
                     },
                     colors: {
-                        accent: '#B44D2D',
+                        accent: '#D4735A',
+                        surface: '#1C1B1A',
+                        base: '#141312',
                     }
                 }
             }
@@ -64,7 +66,7 @@
             content: '';
             position: fixed;
             inset: 0;
-            opacity: 0.3;
+            opacity: 0.15;
             pointer-events: none;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
             background-size: 200px;
@@ -72,13 +74,13 @@
         }
     </style>
 </head>
-<body class="bg-stone-50 text-stone-900 font-sans antialiased">
+<body class="bg-base text-stone-200 font-sans antialiased">
 
     <div class="h-1 bg-accent" aria-hidden="true"></div>
 
     <nav class="max-w-4xl mx-auto px-6 sm:px-8 py-5 flex items-center justify-between">
-        <a href="/" class="font-mono font-semibold text-lg tracking-tight">notai.tech</a>
-        <div class="flex gap-4 sm:gap-6 text-sm text-stone-500">
+        <a href="/" class="font-mono font-semibold text-lg tracking-tight text-stone-100">notai.tech</a>
+        <div class="flex gap-4 sm:gap-6 text-sm text-stone-400">
             <a href="#products" class="hover:text-accent transition-colors">Products</a>
             <a href="#opensource" class="hover:text-accent transition-colors">Open Source</a>
             <a href="mailto:contact@notai.tech" class="hover:text-accent transition-colors">Contact</a>
@@ -88,149 +90,149 @@
     <main>
 
         <header class="max-w-4xl mx-auto px-6 sm:px-8 pt-16 pb-20 sm:pt-24 sm:pb-28">
-            <p class="font-mono text-xs text-stone-400 tracking-widest uppercase mb-5">notai technologies</p>
-            <h1 class="text-3xl sm:text-4xl font-medium leading-snug tracking-tight mb-5">
+            <p class="font-mono text-xs text-stone-500 tracking-widest uppercase mb-5">notai technologies</p>
+            <h1 class="text-3xl sm:text-4xl font-medium leading-snug tracking-tight mb-5 text-stone-100">
                 Useful products built by<br><span class="text-accent">passionate engineers</span>
             </h1>
-            <p class="text-stone-500 max-w-lg leading-relaxed">
+            <p class="text-stone-400 max-w-lg leading-relaxed">
                 We build open source tools and commercial software at the intersection of AI and practical utility.
             </p>
         </header>
 
         <section id="products" class="max-w-4xl mx-auto px-6 sm:px-8 pb-20 sm:pb-24 scroll-mt-8">
-            <h2 class="font-mono text-xs tracking-widest uppercase mb-8 text-amber-800/70 bg-amber-50 inline-block px-3 py-1.5 rounded"><span class="text-accent mr-2">—</span>Products</h2>
+            <h2 class="font-mono text-xs tracking-widest uppercase mb-8 text-amber-400/80 bg-amber-400/10 inline-block px-3 py-1.5 rounded"><span class="text-accent mr-2">—</span>Products</h2>
             <div class="grid sm:grid-cols-3 gap-4">
 
                 <a href="https://knowledgeforai.com" target="_blank" rel="noopener noreferrer"
-                   class="group block border border-amber-200/60 bg-amber-50/40 rounded-lg p-5 hover:border-accent/40 hover:bg-amber-50/70 transition-colors">
+                   class="group block border border-amber-500/15 bg-amber-500/5 rounded-lg p-5 hover:border-accent/30 hover:bg-amber-500/10 transition-colors">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="text-[11px] font-mono text-stone-400 bg-stone-100 px-1.5 py-0.5 rounded">SaaS</span>
-                        <span class="text-stone-300 group-hover:text-accent transition-colors text-sm">&#8599;</span>
+                        <span class="text-[11px] font-mono text-stone-500 bg-stone-800/60 px-1.5 py-0.5 rounded">SaaS</span>
+                        <span class="text-stone-600 group-hover:text-accent transition-colors text-sm">&#8599;</span>
                     </div>
-                    <h3 class="font-mono font-medium mb-1.5 group-hover:text-accent transition-colors">Knowledge for AI</h3>
-                    <p class="text-stone-500 text-sm leading-relaxed mb-3">Knowledge connectors for AI applications</p>
-                    <p class="font-mono text-xs text-stone-400">knowledgeforai.com</p>
+                    <h3 class="font-mono font-medium mb-1.5 text-stone-200 group-hover:text-accent transition-colors">Knowledge for AI</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed mb-3">Knowledge connectors for AI applications</p>
+                    <p class="font-mono text-xs text-stone-500">knowledgeforai.com</p>
                 </a>
 
                 <a href="https://trackernews.app" target="_blank" rel="noopener noreferrer"
-                   class="group block border border-sky-200/60 bg-sky-50/40 rounded-lg p-5 hover:border-sky-300 hover:bg-sky-50/70 transition-colors">
+                   class="group block border border-sky-500/15 bg-sky-500/5 rounded-lg p-5 hover:border-sky-400/30 hover:bg-sky-500/10 transition-colors">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="text-[11px] font-mono text-stone-400 bg-stone-100 px-1.5 py-0.5 rounded">SaaS</span>
-                        <span class="text-stone-300 group-hover:text-accent transition-colors text-sm">&#8599;</span>
+                        <span class="text-[11px] font-mono text-stone-500 bg-stone-800/60 px-1.5 py-0.5 rounded">SaaS</span>
+                        <span class="text-stone-600 group-hover:text-accent transition-colors text-sm">&#8599;</span>
                     </div>
-                    <h3 class="font-mono font-medium mb-1.5 group-hover:text-accent transition-colors">Tracker News</h3>
-                    <p class="text-stone-500 text-sm leading-relaxed mb-3">Turn scattered discussions into structured insights</p>
-                    <p class="font-mono text-xs text-stone-400">trackernews.app</p>
+                    <h3 class="font-mono font-medium mb-1.5 text-stone-200 group-hover:text-accent transition-colors">Tracker News</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed mb-3">Turn scattered discussions into structured insights</p>
+                    <p class="font-mono text-xs text-stone-500">trackernews.app</p>
                 </a>
 
-                <div class="block border border-violet-200/60 bg-violet-50/40 rounded-lg p-5">
+                <div class="block border border-violet-500/15 bg-violet-500/5 rounded-lg p-5">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="text-[11px] font-mono text-stone-400 bg-stone-100 px-1.5 py-0.5 rounded">iOS &amp; macOS</span>
+                        <span class="text-[11px] font-mono text-stone-500 bg-stone-800/60 px-1.5 py-0.5 rounded">iOS &amp; macOS</span>
                     </div>
-                    <h3 class="font-mono font-medium mb-1.5">DeNSFW</h3>
-                    <p class="text-stone-500 text-sm leading-relaxed">Archive and delete NSFW photos natively on your devices</p>
+                    <h3 class="font-mono font-medium mb-1.5 text-stone-200">DeNSFW</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed">Archive and delete NSFW photos natively on your devices</p>
                 </div>
 
             </div>
         </section>
 
         <section id="opensource" class="max-w-4xl mx-auto px-6 sm:px-8 pb-20 sm:pb-24 scroll-mt-8">
-            <h2 class="font-mono text-xs tracking-widest uppercase mb-8 text-emerald-800/70 bg-emerald-50 inline-block px-3 py-1.5 rounded"><span class="text-emerald-600 mr-2">—</span>Open Source</h2>
-            <div class="divide-y divide-stone-200">
+            <h2 class="font-mono text-xs tracking-widest uppercase mb-8 text-emerald-400/80 bg-emerald-400/10 inline-block px-3 py-1.5 rounded"><span class="text-emerald-500 mr-2">—</span>Open Source</h2>
+            <div class="divide-y divide-stone-800">
 
                 <a href="https://github.com/notAI-tech/NudeNet" target="_blank" rel="noopener noreferrer"
                    data-repo="notAI-tech/NudeNet"
-                   class="block py-4 group hover:bg-emerald-50/50 -mx-3 px-3 rounded transition-colors">
+                   class="block py-4 group hover:bg-emerald-500/5 -mx-3 px-3 rounded transition-colors">
                     <div class="flex items-start justify-between gap-4">
                         <div class="min-w-0">
                             <div class="flex items-baseline gap-2.5 flex-wrap">
-                                <h3 class="font-mono text-sm font-medium group-hover:text-accent transition-colors">NudeNet</h3>
-                                <span class="text-[11px] font-mono text-stone-400 bg-stone-200/60 px-1.5 py-0.5 rounded">Content Moderation</span>
-                                <span class="stars-count hidden text-[11px] font-mono text-stone-400"></span>
+                                <h3 class="font-mono text-sm font-medium text-stone-200 group-hover:text-accent transition-colors">NudeNet</h3>
+                                <span class="text-[11px] font-mono text-stone-500 bg-stone-800/80 px-1.5 py-0.5 rounded">Content Moderation</span>
+                                <span class="stars-count hidden text-[11px] font-mono text-stone-500"></span>
                             </div>
-                            <p class="text-stone-500 text-sm mt-1">Lightweight nudity detection</p>
+                            <p class="text-stone-400 text-sm mt-1">Lightweight nudity detection</p>
                         </div>
-                        <span class="text-stone-300 group-hover:text-accent transition-colors mt-0.5 shrink-0 text-sm">&#8599;</span>
+                        <span class="text-stone-600 group-hover:text-accent transition-colors mt-0.5 shrink-0 text-sm">&#8599;</span>
                     </div>
                 </a>
 
                 <a href="https://github.com/notAI-tech/fastDeploy" target="_blank" rel="noopener noreferrer"
                    data-repo="notAI-tech/fastDeploy"
-                   class="block py-4 group hover:bg-emerald-50/50 -mx-3 px-3 rounded transition-colors">
+                   class="block py-4 group hover:bg-emerald-500/5 -mx-3 px-3 rounded transition-colors">
                     <div class="flex items-start justify-between gap-4">
                         <div class="min-w-0">
                             <div class="flex items-baseline gap-2.5 flex-wrap">
-                                <h3 class="font-mono text-sm font-medium group-hover:text-accent transition-colors">fastDeploy</h3>
-                                <span class="text-[11px] font-mono text-stone-400 bg-stone-200/60 px-1.5 py-0.5 rounded">ML Infra</span>
-                                <span class="stars-count hidden text-[11px] font-mono text-stone-400"></span>
+                                <h3 class="font-mono text-sm font-medium text-stone-200 group-hover:text-accent transition-colors">fastDeploy</h3>
+                                <span class="text-[11px] font-mono text-stone-500 bg-stone-800/80 px-1.5 py-0.5 rounded">ML Infra</span>
+                                <span class="stars-count hidden text-[11px] font-mono text-stone-500"></span>
                             </div>
-                            <p class="text-stone-500 text-sm mt-1">Easy and performant micro-services for ML inference</p>
+                            <p class="text-stone-400 text-sm mt-1">Easy and performant micro-services for ML inference</p>
                         </div>
-                        <span class="text-stone-300 group-hover:text-accent transition-colors mt-0.5 shrink-0 text-sm">&#8599;</span>
+                        <span class="text-stone-600 group-hover:text-accent transition-colors mt-0.5 shrink-0 text-sm">&#8599;</span>
                     </div>
                 </a>
 
                 <a href="https://github.com/notAI-tech/deepsegment" target="_blank" rel="noopener noreferrer"
                    data-repo="notAI-tech/deepsegment"
-                   class="block py-4 group hover:bg-emerald-50/50 -mx-3 px-3 rounded transition-colors">
+                   class="block py-4 group hover:bg-emerald-500/5 -mx-3 px-3 rounded transition-colors">
                     <div class="flex items-start justify-between gap-4">
                         <div class="min-w-0">
                             <div class="flex items-baseline gap-2.5 flex-wrap">
-                                <h3 class="font-mono text-sm font-medium group-hover:text-accent transition-colors">deepsegment</h3>
-                                <span class="text-[11px] font-mono text-stone-400 bg-stone-200/60 px-1.5 py-0.5 rounded">NLP</span>
-                                <span class="stars-count hidden text-[11px] font-mono text-stone-400"></span>
+                                <h3 class="font-mono text-sm font-medium text-stone-200 group-hover:text-accent transition-colors">deepsegment</h3>
+                                <span class="text-[11px] font-mono text-stone-500 bg-stone-800/80 px-1.5 py-0.5 rounded">NLP</span>
+                                <span class="stars-count hidden text-[11px] font-mono text-stone-500"></span>
                             </div>
-                            <p class="text-stone-500 text-sm mt-1">A sentence segmenter that actually works</p>
+                            <p class="text-stone-400 text-sm mt-1">A sentence segmenter that actually works</p>
                         </div>
-                        <span class="text-stone-300 group-hover:text-accent transition-colors mt-0.5 shrink-0 text-sm">&#8599;</span>
+                        <span class="text-stone-600 group-hover:text-accent transition-colors mt-0.5 shrink-0 text-sm">&#8599;</span>
                     </div>
                 </a>
 
                 <a href="https://github.com/notAI-tech/fastPunct" target="_blank" rel="noopener noreferrer"
                    data-repo="notAI-tech/fastPunct"
-                   class="block py-4 group hover:bg-emerald-50/50 -mx-3 px-3 rounded transition-colors">
+                   class="block py-4 group hover:bg-emerald-500/5 -mx-3 px-3 rounded transition-colors">
                     <div class="flex items-start justify-between gap-4">
                         <div class="min-w-0">
                             <div class="flex items-baseline gap-2.5 flex-wrap">
-                                <h3 class="font-mono text-sm font-medium group-hover:text-accent transition-colors">fastPunct</h3>
-                                <span class="text-[11px] font-mono text-stone-400 bg-stone-200/60 px-1.5 py-0.5 rounded">NLP</span>
-                                <span class="stars-count hidden text-[11px] font-mono text-stone-400"></span>
+                                <h3 class="font-mono text-sm font-medium text-stone-200 group-hover:text-accent transition-colors">fastPunct</h3>
+                                <span class="text-[11px] font-mono text-stone-500 bg-stone-800/80 px-1.5 py-0.5 rounded">NLP</span>
+                                <span class="stars-count hidden text-[11px] font-mono text-stone-500"></span>
                             </div>
-                            <p class="text-stone-500 text-sm mt-1">Punctuation restoration and spell correction</p>
+                            <p class="text-stone-400 text-sm mt-1">Punctuation restoration and spell correction</p>
                         </div>
-                        <span class="text-stone-300 group-hover:text-accent transition-colors mt-0.5 shrink-0 text-sm">&#8599;</span>
+                        <span class="text-stone-600 group-hover:text-accent transition-colors mt-0.5 shrink-0 text-sm">&#8599;</span>
                     </div>
                 </a>
 
                 <a href="https://github.com/notAI-tech/LogoDet" target="_blank" rel="noopener noreferrer"
                    data-repo="notAI-tech/LogoDet"
-                   class="block py-4 group hover:bg-emerald-50/50 -mx-3 px-3 rounded transition-colors">
+                   class="block py-4 group hover:bg-emerald-500/5 -mx-3 px-3 rounded transition-colors">
                     <div class="flex items-start justify-between gap-4">
                         <div class="min-w-0">
                             <div class="flex items-baseline gap-2.5 flex-wrap">
-                                <h3 class="font-mono text-sm font-medium group-hover:text-accent transition-colors">LogoDet</h3>
-                                <span class="text-[11px] font-mono text-stone-400 bg-stone-200/60 px-1.5 py-0.5 rounded">Computer Vision</span>
-                                <span class="stars-count hidden text-[11px] font-mono text-stone-400"></span>
+                                <h3 class="font-mono text-sm font-medium text-stone-200 group-hover:text-accent transition-colors">LogoDet</h3>
+                                <span class="text-[11px] font-mono text-stone-500 bg-stone-800/80 px-1.5 py-0.5 rounded">Computer Vision</span>
+                                <span class="stars-count hidden text-[11px] font-mono text-stone-500"></span>
                             </div>
-                            <p class="text-stone-500 text-sm mt-1">Neural network-based logo detection</p>
+                            <p class="text-stone-400 text-sm mt-1">Neural network-based logo detection</p>
                         </div>
-                        <span class="text-stone-300 group-hover:text-accent transition-colors mt-0.5 shrink-0 text-sm">&#8599;</span>
+                        <span class="text-stone-600 group-hover:text-accent transition-colors mt-0.5 shrink-0 text-sm">&#8599;</span>
                     </div>
                 </a>
 
                 <a href="https://github.com/notAI-tech/IndicASR" target="_blank" rel="noopener noreferrer"
                    data-repo="notAI-tech/IndicASR"
-                   class="block py-4 group hover:bg-emerald-50/50 -mx-3 px-3 rounded transition-colors">
+                   class="block py-4 group hover:bg-emerald-500/5 -mx-3 px-3 rounded transition-colors">
                     <div class="flex items-start justify-between gap-4">
                         <div class="min-w-0">
                             <div class="flex items-baseline gap-2.5 flex-wrap">
-                                <h3 class="font-mono text-sm font-medium group-hover:text-accent transition-colors">IndicASR</h3>
-                                <span class="text-[11px] font-mono text-stone-400 bg-stone-200/60 px-1.5 py-0.5 rounded">Speech</span>
-                                <span class="stars-count hidden text-[11px] font-mono text-stone-400"></span>
+                                <h3 class="font-mono text-sm font-medium text-stone-200 group-hover:text-accent transition-colors">IndicASR</h3>
+                                <span class="text-[11px] font-mono text-stone-500 bg-stone-800/80 px-1.5 py-0.5 rounded">Speech</span>
+                                <span class="stars-count hidden text-[11px] font-mono text-stone-500"></span>
                             </div>
-                            <p class="text-stone-500 text-sm mt-1">Speech recognition for Indian languages</p>
+                            <p class="text-stone-400 text-sm mt-1">Speech recognition for Indian languages</p>
                         </div>
-                        <span class="text-stone-300 group-hover:text-accent transition-colors mt-0.5 shrink-0 text-sm">&#8599;</span>
+                        <span class="text-stone-600 group-hover:text-accent transition-colors mt-0.5 shrink-0 text-sm">&#8599;</span>
                     </div>
                 </a>
 
@@ -239,44 +241,44 @@
 
     </main>
 
-    <footer class="border-t border-stone-200 mt-8">
+    <footer class="border-t border-stone-800 mt-8">
         <div class="max-w-4xl mx-auto px-6 sm:px-8 py-12 sm:py-16">
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12 mb-12">
                 <div>
-                    <p class="font-mono text-xs text-stone-400 tracking-widest uppercase mb-4">Products</p>
+                    <p class="font-mono text-xs text-stone-500 tracking-widest uppercase mb-4">Products</p>
                     <ul class="space-y-2.5 text-sm">
-                        <li><a href="https://knowledgeforai.com" target="_blank" rel="noopener noreferrer" class="text-stone-600 hover:text-accent transition-colors">Knowledge for AI</a></li>
-                        <li><a href="https://trackernews.app" target="_blank" rel="noopener noreferrer" class="text-stone-600 hover:text-accent transition-colors">Tracker News</a></li>
-                        <li><span class="text-stone-600">DeNSFW</span></li>
+                        <li><a href="https://knowledgeforai.com" target="_blank" rel="noopener noreferrer" class="text-stone-400 hover:text-accent transition-colors">Knowledge for AI</a></li>
+                        <li><a href="https://trackernews.app" target="_blank" rel="noopener noreferrer" class="text-stone-400 hover:text-accent transition-colors">Tracker News</a></li>
+                        <li><span class="text-stone-400">DeNSFW</span></li>
                     </ul>
                 </div>
                 <div>
-                    <p class="font-mono text-xs text-stone-400 tracking-widest uppercase mb-4">Open Source</p>
+                    <p class="font-mono text-xs text-stone-500 tracking-widest uppercase mb-4">Open Source</p>
                     <ul class="space-y-2.5 text-sm">
-                        <li><a href="https://github.com/notAI-tech/NudeNet" target="_blank" rel="noopener noreferrer" class="text-stone-600 hover:text-accent transition-colors">NudeNet</a></li>
-                        <li><a href="https://github.com/notAI-tech/fastDeploy" target="_blank" rel="noopener noreferrer" class="text-stone-600 hover:text-accent transition-colors">fastDeploy</a></li>
-                        <li><a href="https://github.com/notai-tech" target="_blank" rel="noopener noreferrer" class="text-stone-600 hover:text-accent transition-colors">All repositories</a></li>
+                        <li><a href="https://github.com/notAI-tech/NudeNet" target="_blank" rel="noopener noreferrer" class="text-stone-400 hover:text-accent transition-colors">NudeNet</a></li>
+                        <li><a href="https://github.com/notAI-tech/fastDeploy" target="_blank" rel="noopener noreferrer" class="text-stone-400 hover:text-accent transition-colors">fastDeploy</a></li>
+                        <li><a href="https://github.com/notai-tech" target="_blank" rel="noopener noreferrer" class="text-stone-400 hover:text-accent transition-colors">All repositories</a></li>
                     </ul>
                 </div>
                 <div>
-                    <p class="font-mono text-xs text-stone-400 tracking-widest uppercase mb-4">Company</p>
+                    <p class="font-mono text-xs text-stone-500 tracking-widest uppercase mb-4">Company</p>
                     <ul class="space-y-2.5 text-sm">
-                        <li><a href="https://github.com/notai-tech" target="_blank" rel="noopener noreferrer" class="text-stone-600 hover:text-accent transition-colors">GitHub</a></li>
-                        <li><a href="https://www.linkedin.com/company/notai-tech/" target="_blank" rel="noopener noreferrer" class="text-stone-600 hover:text-accent transition-colors">LinkedIn</a></li>
-                        <li><a href="mailto:contact@notai.tech" class="text-stone-600 hover:text-accent transition-colors">Contact</a></li>
+                        <li><a href="https://github.com/notai-tech" target="_blank" rel="noopener noreferrer" class="text-stone-400 hover:text-accent transition-colors">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/company/notai-tech/" target="_blank" rel="noopener noreferrer" class="text-stone-400 hover:text-accent transition-colors">LinkedIn</a></li>
+                        <li><a href="mailto:contact@notai.tech" class="text-stone-400 hover:text-accent transition-colors">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <p class="font-mono text-xs text-stone-400 tracking-widest uppercase mb-4">Legal</p>
+                    <p class="font-mono text-xs text-stone-500 tracking-widest uppercase mb-4">Legal</p>
                     <ul class="space-y-2.5 text-sm">
-                        <li><a href="privacy.html" class="text-stone-600 hover:text-accent transition-colors">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="text-stone-600 hover:text-accent transition-colors">Terms of Service</a></li>
+                        <li><a href="privacy.html" class="text-stone-400 hover:text-accent transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-stone-400 hover:text-accent transition-colors">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="pt-8 border-t border-stone-200 flex flex-col sm:flex-row justify-between gap-3 items-start sm:items-center">
-                <a href="/" class="font-mono font-semibold tracking-tight">notai.tech</a>
-                <p class="text-xs text-stone-400 font-mono">&copy; 2025 NOTAI TECHNOLOGIES (OPC) PRIVATE LIMITED</p>
+            <div class="pt-8 border-t border-stone-800 flex flex-col sm:flex-row justify-between gap-3 items-start sm:items-center">
+                <a href="/" class="font-mono font-semibold tracking-tight text-stone-100">notai.tech</a>
+                <p class="text-xs text-stone-500 font-mono">&copy; 2025 NOTAI TECHNOLOGIES (OPC) PRIVATE LIMITED</p>
             </div>
         </div>
     </footer>
